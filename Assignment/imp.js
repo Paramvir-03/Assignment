@@ -127,11 +127,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to handle animation sequence
     function animateSequence(index) {
         if (index < parakaiWrappers.length) {
-            // Display current pihaWrapper
+            // 
             parakaiWrappers[index].style.display = 'block';
             // Wait for the animation to finish
             setTimeout(() => {
-                // Hide current pihaWrapper
+                // Hid
                 parakaiWrappers[index].style.display = 'none';
                 // Continue with the next one
                 animateSequence(index + 1);
