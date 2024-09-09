@@ -1,0 +1,353 @@
+@font-face {
+    font-family: 'Amagro';
+    src: url('Amagro.ttf');
+}
+body{
+    background-color: antiquewhite;
+}
+.section1{
+    margin-bottom: 10%;
+}
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+.myDetails {
+    width: 100%;
+    height: 300px;
+    background-color: aquamarine;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5%;
+}
+.parakaiWrapper {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.1%;
+}
+.parakaiImage1{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    animation: panImageUp 6s ease, s1t1 6s forwards;
+}
+.parakaiImage2{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    animation: panImageDown 6s ease, s1t1 6s forwards;
+}
+.parakaiImage3{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+    animation: panImageUp 6s ease, s1t1 6s forwards;
+}
+.textOverlay1 {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 400%;
+    font-family: 'Amagro', sans-serif;
+    color: white;
+    background-color: transparent;
+    z-index: 1;
+    animation: slideFromLeft 1s ease-out,changeTextColor 3s ease 2, s1t1 6s forwards;
+}
+.textOverlay2 {
+    position: absolute;
+    top: 45px;  
+    align-items: center;
+    font-size: 200%;
+    font-family: 'Amagro', sans-serif;
+    color: white;
+    background-color: transparent;
+    z-index: 1;
+    animation: slideFromRight 1s ease-out,changeTextSize 3s cubic-bezier(0.25, 0.1, 0.25, 1) 2s, s1t1 6s forwards;
+}
+.textOverlay3 {
+    position: absolute;
+    top: 45px;
+    left: 10%;
+    font-size: 400%;
+    font-family: 'Amagro', sans-serif;
+    color: white;
+    background-color: transparent;
+    z-index: 1;
+    animation: slideFromLeft 1s ease-out,changeTextColor 3s ease 2, s1t1 6s forwards;
+}
+.textOverlay4 {
+    position: absolute;
+    top: 45px;
+    left: 20%;
+    font-size: 400%;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+}
+.ad1line2{
+    font-size: 100%;
+}
+.ad2line2 {
+    font-size: 100%;
+}
+.ad3line2 {
+    font-size: 100%;
+}
+.gjnzWrapperMaster {
+    width: 25%;
+    height: 600px;
+    background-color: lightblue;
+    float: right;
+    margin-bottom: 1%;
+}
+.booking{
+    width: 74.6%;
+    height: 600px;
+    background-color: cornflowerblue;
+    float: left;
+    text-align: center;
+}
+.gjnzWrapper{
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+.adImage1{
+    width: 100%;
+    height: 600px;
+    object-fit:cover;
+    animation: panLeft 2.5s ease-out, s1t1 3s forwards;
+}
+.adImage2{
+    width: 100%;
+    height: 600px;
+    object-fit:cover;
+}
+.adImage3{
+    width: 100%;
+    height: 600px;
+    object-fit:cover;
+}
+.adImage4{
+    width: 100%;
+    height: 300px;
+    object-fit:cover;
+}
+.textOverlayAd1 {
+    position: absolute;
+    font-size: 100%;
+    top: 150px;
+    left: 20px;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+    animation: s1t1 3s forwards;
+}
+.textOverlayAd2 {
+    position: absolute;
+    font-size: 100%;
+    top: 150px;
+    left: 20px;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+    animation: s1t1 3s forwards;
+}
+.textOverlayAd3 {
+    position: absolute;
+    font-size: 100%;
+    top: 150px;
+    left: 20px;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+    animation: s1t1 3s forwards;
+}
+.textOverlayAd4 {
+    position: absolute;
+    font-size: 100%;
+    top: 150px;
+    left: 20px;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+    animation: s1t1 3s forwards;
+}
+.textOverlayAd5 {
+    position: absolute;
+    font-size: 400%;
+    font-family: 'Amagro', sans-serif;
+    color: black;
+    background-color: transparent;
+    z-index: 1;
+}
+.myDetails2 {
+    width: 100%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1%;
+    color: black;
+}
+@keyframes slideFromLeft{
+    0%{
+        transform: translateX(-100%);
+        opacity: 0;
+   }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+   }
+}
+@keyframes slideFromRight{
+    0%{
+        transform: translateX(100%);
+        opacity: 0;
+   }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+   }
+}
+@keyframes changeTextColor {
+    0%{
+        color: white;
+   }
+    50%{
+        color: palegreen;
+   }
+    100%{
+        color: white;
+   }
+}
+@keyframes panImageUp {
+    0% {
+        object-position: 40% 40%;
+   }
+    100% {
+        object-position: 40% 70%;
+   }
+}
+@keyframes panImageDown {
+    0% {
+        object-position: 40% 70%;
+   }
+    100% {
+        object-position: 40% 40%;
+   }
+}
+@keyframes s1t1 {
+    0%{
+        transform: translateX(0);
+   }
+    92%{
+        transform: translateX(0);
+   }
+    97%{
+        transform: translateX(-200%);
+        visibility: hidden;
+   }
+    100%{
+        transform: translateX(-500%);
+        visibility: hidden;
+   }
+}
+@keyframes changeTextSize {
+    0% {
+        font-size: 250%;
+   }
+    50% {
+        font-size: 350%;
+   }
+    100% {
+        font-size: 250%;
+   }
+}
+/* Style for the pages */
+.page {
+    display: none;
+}
+/* Style for the header */
+h2 {
+    margin-top: 100px;
+}
+/* Style for form elements */
+input[type="date"], input[type="text"], input[type="email"], input[type="tel"], textarea {
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    align-items: flex-start;
+}
+input[type="range"] {
+    width: 30%;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+#reviewDetails {
+    margin-bottom: 10px;
+    display: block;
+}
+#agree {
+    margin-bottom: 10px;
+}
+#submitButton {
+    margin-top: 10px;
+}
+/* Style for success message */
+#successMessage p {
+    margin-top: 0;
+}
+@keyframes panLeft {
+    0% {
+        object-position: 70% 40%;
+   }
+    100% {
+        object-position: 40% 40%;
+   }
+}
+/* Center the "View Storyboard" link */
+a[href='STORYBOARD.pdf'] {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Add some spacing above */
+    margin-bottom: 20px; /* Add some spacing below */
+}
+
+
+
+

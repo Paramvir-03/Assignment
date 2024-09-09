@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Parakai Springs Homepage</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<!-- Parakai Springs Advertisement Section -->
+		<section id="section1" onclick="redirectToWebsite('https://www.parakaisprings.co.nz/')">
+			<div class="parakaiWrapper" id="piha1">
+				<img src="parakaiSprings.jpeg" class="parakaiImage1" />
+				<div class="textOverlay1">
+					<div class="ad1line1">  COME VISIT</div>
+					<div class="ad1line2">PARAKAI SPRINGS</div>
+				</div>
+			</div>
+			<div class="parakaiWrapper" id="piha2" style="display: none;">
+				<img src="parakaiPrice.jpeg" class="parakaiImage2" />
+				<div class="textOverlay2">
+				<!--<div class="piha2line1">EXPLORE</div> -->	
+					<div class="ad2line2">EXPLORE FAST-PASS OPTIONS</div>
+				</div>
+			</div>
+			<div class="parakaiWrapper" id="piha3" style="display: none;">
+				<img src="parakaiWebsite.jpg" class="parakaiImage3" />
+				<div class="textOverlay3">
+					
+					<div class="ad3line2">CLICK TO VISIT WEBSITE</div>
+				</div>
+			</div>
+			<div class="myDetails" id="myDetails" style="display: none;">
+				<div class="textOverlay4">Paramvir Singh <br>1564701</div>
+			</div>
+		</section>
+
+		<!-- Booking Section -->
+		<section id="section2">
+			<div class="booking">
+				<!-- Landing Page -->
+				<div id="landingPage">
+					<h2>TICKET SYSTEM</h2>
+					<p>Click the button below to initiate the booking process</p>
+					<button onclick="showPage(2)">Start Booking</button>
+				</div>
+
+				<!-- Step 1: Attendance Date & Guests -->
+				<div id="step1" style="display: none;">
+					<h2>Step 1: Select Attendance Date and Guests</h2>
+					<label for="checkInDate">Date of Attendance: </label>
+					<input type="date" id="checkInDate"><br>
+					<label for="adults">No. of Adults: </label>
+					<input type="range" id="adults" min="1" max="10" value="1" oninput="updateValue('adultsValue', this.value)">
+					<span id="adultsValue">1</span><br>
+					<label for="children">No. of Children: </label>
+					<input type="range" id="children" min="0" max="10" value="0" oninput="updateValue('childrenValue', this.value)">
+					<span id="childrenValue">0</span><br>
+					<button onclick="showPage(1)">Previous</button>
+					<button onclick="showPage(3)">Next</button><br>
+					<progress id="bookingProgress" value="25" max="100">25%</progress>
+				</div>
+
+				<!-- Step 2: Contact Information -->
+				<div id="step2" style="display: none;">
+					<h2>Step 2: Enter Contact Information</h2>
+					<label for="fullName">Full Name: </label>
+					<input type="text" id="fullName"><br>
+					<label for="email">Email: </label>
+					<input type="email" id="email"><br>
+					<label for="phone">Phone No.: </label>
+					<input type="tel" id="phone"><br>
+					<button onclick="showPage(2)">Previous</button>
+					<button onclick="showPage(4)">Next</button><br>
+					<progress id="bookingProgress" value="50" max="100">50%</progress>
+				</div>
+
+				<!-- Step 3: Ticket Options -->
+				<div id="step3" style="display: none;">
+					<h2>Step 3: Choose Ticket Options</h2>
+					<label for="ticketColor">Ticket Color: </label>
+					<input type="color" id="ticketColor"><br>
+					<label>Need Storage Locker: </label>
+					<input type="radio" name="locker" value="Yes"> Yes 
+					<input type="radio" name="locker" value="No" checked> No<br>
+					<button onclick="showPage(3)">Previous</button>
+					<button onclick="showPage(5)">Next</button><br>
+					<progress id="bookingProgress" value="75" max="100">75%</progress>
+				</div>
+
+				<!-- Step 4: Review & Submit -->
+				<div id="step4" style="display: none;">
+					<h2>Step 4: Review and Submit</h2>
+					<div id="reviewDetails"></div>
+					<input type="checkbox" id="agree"> I agree to the terms and conditions<br>
+					<button onclick="showPage(4)">Previous</button>
+					<button onclick="submitForm()">Submit</button><br>
+					<progress id="bookingProgress" value="100" max="100">100%</progress>
+				</div>
+
+				<!-- Success Message -->
+				<div id="successMessage" style="display: none;">
+					<h2>Booking Successful!</h2>
+					<p>Thank you for your booking. Your stay has been confirmed.</p>
+					<button onclick="showPage(1)">Return to Landing Page</button>
+				</div>
+			</div>
+
+			<!-- Sidebar Advertisement -->
+			 
+<section onclick="redirectToWebsite('https://www.greatjourneysnz.com/')">
+    <div class="gjnzWrapperMaster">
+        <!-- Advertisement 1 (First Image + Text) -->
+        <div class="gjnzWrapper" id="ad1" style="display: block;">
+            <img src="Photo1.jpg" class="adImage1" />
+            <div class="textOverlayAd1">EXPLORE THE REGION</div>
+        </div>
+
+        <!-- Advertisement 2 (Second Image + Text) -->
+        <div class="gjnzWrapper" id="ad2" style="display: none;">
+            <img src="Photo2.jpg" class="adImage2" />
+            <div class="textOverlayAd2">GET READY FOR EXCITING TRIPS</div>
+        </div>
+
+		<!-- Advertisement 2 (Second Image + Text) -->
+        <div class="gjnzWrapper" id="ad3" style="display: none;">
+            <img src="Photo2.jpg" class="adImage3" />
+            <div class="textOverlayAd3">BOOK NOW</div>
+        </div>
+
+        <!-- Name and ID (Shown After Ads) -->
+        <div class="myDetails2" id="myDetails2" style="display: none;">
+            <div class="textOverlayAd4">Paramvir Singh<br>1564701</div>
+        </div>
+    </div>
+</section>
+
+<!-- Replay Button -->
+<br>
+<button onclick="Ad2replay()">Replay Advertisement</button>
+		</section>
+
+		<a href="STORYBOARD.pdf">View Storyboard</a>
+		<script src="imp.js"></script>
+	</body>
+</html>
